@@ -347,12 +347,12 @@ def predict_contents_nn(args, train_codes, train_contents,
     dataset_constructor = DataFrame_Dataset
 
     if predicted_factors == 'all':
-        predicted_factors = list(train_contents.columns)
+        if landmarks_clause:
+            predicted_factors = ['class', 'landmarks']
+        else:
+            predicted_factors = list(train_contents.columns)
 
     all_accs = {}
-
-    if landmarks_clause and predicted_factors == 'landmarks':
-        predicted_factors = ['class', 'landmarks']
 
     for factor_name in predicted_factors:
 
