@@ -18,7 +18,7 @@ python -u main.py \
 --load-weights-exp='debug' \
 --load-weights-epoch='last' \
 \
---exp-name='DCoDR__cars3d' \
+--exp-name='DCoDR_cars3d' \
 --data-name=$dataset \
 --test-data-name='cars3d_test' \
 \
