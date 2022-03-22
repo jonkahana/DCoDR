@@ -29,7 +29,7 @@ class Generator_Only_Model(nn.Module):
         self.config = config
         self.class_embedding = nn.Embedding(config['n_classes'], config['class_dim'])
         self.class_embedding = torch.nn.DataParallel(self.class_embedding)
-        self.modulation = Modulation(config['class_dim'] * self.config['n_classes'])
+        self.modulation = Modulation(config['class_dim'])
         self.modulation = torch.nn.DataParallel(self.modulation)
 
         self.generator = Generator(config['content_dim'], config['img_shape'])
