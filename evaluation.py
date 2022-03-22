@@ -266,16 +266,15 @@ class Shallow_Classifier(nn.Module):
 
 class DataFrame_Dataset(torch.utils.data.Dataset):
 
-    def __init__(self, df: np.array, res: np.array, classes: np.array):
+    def __init__(self, df: np.array, res: np.array):
         self.vals = df.values
         self.res = res
-        self.classes = classes
 
     def __len__(self):
         return len(self.vals)
 
     def __getitem__(self, i):
-        return self.vals[i], self.res[i], self.classes[i]
+        return self.vals[i], self.res[i]
 
 
 def epoch_linear_classifier(model, dataloader, optimizer, is_classification=True):
@@ -372,20 +371,23 @@ def predict_contents_nn(args, train_codes, train_contents,
             out_size = len(factor_name)
         else:
             is_classification = True
-            out_size = len(np.unique(pd.concat([train_contents[factor_name],
+            all_factor_values = np.unique(pd.concat([train_contents[factor_name],
                                                 val_contents[factor_name],
-                                                test_contents[factor_name]])
-                                     )
-                           )
+                                                test_contents[factor_name]]))
+            out_size = len(all_factor_values)
+            mapping = {x: i for i, x in enumerate(sorted(all_factor_values))}
+            train_contents[factor_name] = train_contents[factor_name].apply(lambda x: mapping[x])
+            val_contents[factor_name] = val_contents[factor_name].apply(lambda x: mapping[x])
+            test_contents[factor_name] = test_contents[factor_name].apply(lambda x: mapping[x])
 
         workers = 4
         if not args.cuda:
             workers = 0
-        train_set = DataFrame_Dataset(train_codes, train_contents[factor_name].values, train_contents['class'].values)
+        train_set = DataFrame_Dataset(train_codes, train_contents[factor_name].values)
         train_loader = DataLoader(train_set, batch_size=128, shuffle=True, pin_memory=False, num_workers=workers)
-        val_set = DataFrame_Dataset(val_codes, val_contents[factor_name].values, val_contents['class'].values)
+        val_set = DataFrame_Dataset(val_codes, val_contents[factor_name].values)
         val_loader = DataLoader(val_set, batch_size=128, shuffle=True, pin_memory=False, num_workers=workers)
-        test_set = DataFrame_Dataset(test_codes, test_contents[factor_name].values, test_contents['class'].values)
+        test_set = DataFrame_Dataset(test_codes, test_contents[factor_name].values)
         test_loader = DataLoader(test_set, batch_size=128, shuffle=False, pin_memory=False, num_workers=workers)
         if landmarks_clause and original_factor_name == 'landmarks':
             factor_name = 'landmarks'
