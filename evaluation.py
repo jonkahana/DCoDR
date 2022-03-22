@@ -27,8 +27,6 @@ os.makedirs(save_results_path, exist_ok=True)
 
 weights_folder = 'eval_weights/tmp_weights'
 
-max_unique_vals_for_classification = 200000
-
 
 # region Evaluation Args
 
@@ -344,7 +342,6 @@ def predict_contents_nn(args, train_codes, train_contents,
                         early_stopping=7):
     global weights_folder
     inp_size = train_codes.shape[1]
-    dataset_constructor = DataFrame_Dataset
 
     if predicted_factors == 'all':
         if landmarks_clause:
@@ -384,11 +381,11 @@ def predict_contents_nn(args, train_codes, train_contents,
         workers = 4
         if not args.cuda:
             workers = 0
-        train_set = dataset_constructor(train_codes, train_contents[factor_name].values, train_contents['class'].values)
+        train_set = DataFrame_Dataset(train_codes, train_contents[factor_name].values, train_contents['class'].values)
         train_loader = DataLoader(train_set, batch_size=128, shuffle=True, pin_memory=False, num_workers=workers)
-        val_set = dataset_constructor(val_codes, val_contents[factor_name].values, val_contents['class'].values)
+        val_set = DataFrame_Dataset(val_codes, val_contents[factor_name].values, val_contents['class'].values)
         val_loader = DataLoader(val_set, batch_size=128, shuffle=True, pin_memory=False, num_workers=workers)
-        test_set = dataset_constructor(test_codes, test_contents[factor_name].values, test_contents['class'].values)
+        test_set = DataFrame_Dataset(test_codes, test_contents[factor_name].values, test_contents['class'].values)
         test_loader = DataLoader(test_set, batch_size=128, shuffle=False, pin_memory=False, num_workers=workers)
         if landmarks_clause and original_factor_name == 'landmarks':
             factor_name = 'landmarks'
