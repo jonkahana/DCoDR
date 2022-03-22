@@ -38,11 +38,9 @@ $exp_type \
 --num-b-cls-samp=32 \
 --num-b-cls=4 \
 \
---use-class=$True \
 --gen-arch='lord' \
 --gen-lr=0.001 \
 --reconstruction-decay=0.3 \
---use-adv-loss=$False \
 \
 --shifting-key='tau' \
 --shifting-args="[0.1]" \
