@@ -567,16 +567,12 @@ if __name__ == '__main__':
                             rolling_val += val_counts[val]
                             print(f'\t{val}: {rolling_val / np.sum(val_counts)}')
 
-                predicted_factors = 'all'
-                if landmarks_clause:
-                    predicted_factors = 'landmarks'
-
                 print('Test Prediction:')
                 cur_results = predict_contents_nn(args, train_codes, train_contents,
                                                   val_codes, val_contents,
                                                   test_codes, test_contents,
                                                   epochs=100, hidden_size=128, num_hidden_layers=6,
-                                                  predicted_factors=predicted_factors
+                                                  predicted_factors='all'
                                                   )
 
                 del train_codes, train_contents, val_codes, val_contents, test_codes, test_contents
