@@ -51,7 +51,7 @@ Please create a directory `<base-dir>/pretrained_weights` and put the ImageNet p
 MocoV2 weights can be downloaded from [here](https://drive.google.com/drive/folders/1SAsU6OQz38TXkzRcBpUxianEK35g6UHy?usp=sharing) or from the official [github page](https://github.com/facebookresearch/moco)
 
 
-### Downloading the Datasets
+### Downloading the Pre-Processed Datasets
 
 **NOTE:** you need to download the datasets first. 
 
@@ -59,7 +59,7 @@ We provide pre-processed versions of the datasets. They are found in [here](http
 
 Please put the pre-processed versions under `cache/preprocess`.
 
-### Pre-Processing the Datasets (Optional)
+### Pre-Processing the Datasets Yourself (Optional)
 
 **NOTE:** As mentions above you can download the pre-processed versions from [here](https://drive.google.com/drive/folders/1i1rgZFBPAXnlbUsYp9Fnh5IqyQJGnjzq?usp=sharing).
 
