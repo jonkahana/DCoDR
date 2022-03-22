@@ -187,7 +187,7 @@ def loop_once_gather_outputs(args, data_loader, model):
         indxs.append(batch['img_id'].detach().cpu())
         class_ids.append(batch['class_id'].detach().cpu())
         contents.append(batch['content'].detach().cpu())
-        if args.eval_type in ['retrieval'] and args.save_retrieval_imgs:
+        if args.eval_type == 'retrieval':
             imgs.append(batch['img'].detach().cpu())
 
     del batch
