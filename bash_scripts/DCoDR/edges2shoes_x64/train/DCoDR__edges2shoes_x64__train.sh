@@ -38,7 +38,6 @@ $exp_type \
 --num-b-cls-samp=32 \
 --num-b-cls=4 \
 \
---gen-arch='lord' \
 --gen-lr=0.001 \
 --reconstruction-decay=0.3 \
 \
