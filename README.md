@@ -48,9 +48,7 @@ By default the `<base-dir>` directory is the main directory of the repository, a
 
 Please create a directory `<base-dir>/pretrained_weights` and put the ImageNet pre-trained weights in it.
 
-MocoV2 weights can be downloaded from [here](https://drive.google.com/drive/folders/1SAsU6OQz38TXkzRcBpUxianEK35g6UHy?usp=sharing)
-
-Or from the official [github page](https://github.com/facebookresearch/moco)
+MocoV2 weights can be downloaded from [here](https://drive.google.com/drive/folders/1SAsU6OQz38TXkzRcBpUxianEK35g6UHy?usp=sharing) or from the official [github page](https://github.com/facebookresearch/moco)
 
 
 ### Downloading the Datasets
