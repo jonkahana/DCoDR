@@ -11,9 +11,9 @@ PATH_TO_PROJECT_DIR='cache'
 python -u evaluation.py \
 --base-dir=$PATH_TO_PROJECT_DIR \
 --eval-type='prediction' \
---eval-name='DCoDR__smallnorb' \
+--eval-name='DCoDR_smallnorb' \
 --evaluated-exp-names="[]" \
---root-exps="['DCoDR__smallnorb']" \
+--root-exps="['DCoDR_smallnorb']" \
 --train-data-name=$dataset \
 --delete-weights-folder=$False \
 --chosen-epoch='last' \
@@ -22,9 +22,9 @@ python -u evaluation.py \
 python -u evaluation.py \
 --base-dir=$PATH_TO_PROJECT_DIR \
 --eval-type='retrieval' \
---eval-name='DCoDR__smallnorb' \
+--eval-name='DCoDR_smallnorb' \
 --evaluated-exp-names="[]" \
---root-exps="['DCoDR__smallnorb']" \
+--root-exps="['DCoDR_smallnorb']" \
 --train-data-name=$dataset \
 --delete-weights-folder=$False \
 --chosen-epoch='last' \

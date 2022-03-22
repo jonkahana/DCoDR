@@ -18,7 +18,7 @@ python -u main.py \
 --load-weights-exp='debug' \
 --load-weights-epoch='last' \
 \
---exp-name='DCoDR__shapes3d_shape' \
+--exp-name='DCoDR_shapes3d_shape_50K' \
 --data-name=$dataset \
 --test-data-name='shapes3d__class_shape__filter_samples__test' \
 \

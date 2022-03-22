@@ -18,7 +18,7 @@ python -u main.py \
 --load-weights-exp='debug' \
 --load-weights-epoch='last' \
 \
---exp-name='DCoDR__edges2shoes_x64' \
+--exp-name='DCoDR_edges2shoes_x64' \
 --data-name=$dataset \
 --batch-size=64 \
 --epochs=200 \

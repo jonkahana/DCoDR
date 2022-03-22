@@ -11,9 +11,9 @@ PATH_TO_PROJECT_DIR='cache'
 python -u evaluation.py \
 --base-dir=$PATH_TO_PROJECT_DIR \
 --eval-type='prediction' \
---eval-name='DCoDR_norec__edges2shoes_x64' \
+--eval-name='DCoDR_norec_edges2shoes_x64' \
 --evaluated-exp-names="[]" \
---root-exps="['DCoDR_norec__edges2shoes_x64']" \
+--root-exps="['DCoDR_norec_edges2shoes_x64']" \
 --train-data-name=$dataset \
 --delete-weights-folder=$False \
 --chosen-epoch="['last']" \
@@ -22,9 +22,9 @@ python -u evaluation.py \
 python -u evaluation.py \
 --base-dir=$PATH_TO_PROJECT_DIR \
 --eval-type='retrieval' \
---eval-name='DCoDR_norec__edges2shoes_x64' \
+--eval-name='DCoDR_norec_edges2shoes_x64' \
 --evaluated-exp-names="[]" \
---root-exps="['DCoDR_norec__edges2shoes_x64']" \
+--root-exps="['DCoDR_norec_edges2shoes_x64']" \
 --train-data-name=$dataset \
 --delete-weights-folder=$False \
 --chosen-epoch="['last']" \
