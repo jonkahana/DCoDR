@@ -462,7 +462,7 @@ if __name__ == '__main__':
         # make train and test by stratified split
         indxs = np.arange(all_data['imgs'].shape[0])
         cela_train_indxs, cela_test_indxs = train_test_split(indxs, stratify=all_data['classes'],
-                                                             test_size=0.25, random_state=0)
+                                                             test_size=0.1, random_state=0)
         train_data, test_data = {}, {}
         for k in all_data.keys():
             if k == 'n_classes':
@@ -542,7 +542,7 @@ if __name__ == '__main__':
 
                 np.random.seed(2)
                 train_indxs, val_indxs, train_cls, val_cls = train_test_split(trainval_indxs, trainval_class_ids,
-                                                                              test_size=0.1)
+                                                                              test_size=0.1, random_state=0)
 
                 train_contents = trainval_contents.loc[train_indxs, :]
                 val_contents = trainval_contents.loc[val_indxs, :]
