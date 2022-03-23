@@ -18,7 +18,7 @@ python -u main.py \
 --load-weights-exp='debug' \
 --load-weights-epoch='last' \
 \
---exp-name='DCoDR_norec__smallnorb__no_pos' \
+--exp-name='DCoDR_norec_smallnorb__no_pos' \
 --data-name=$dataset \
 --test-data-name='smallnorb_test' \
 \
