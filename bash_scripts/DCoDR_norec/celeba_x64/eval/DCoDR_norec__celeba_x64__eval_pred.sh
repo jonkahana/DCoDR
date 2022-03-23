@@ -19,16 +19,6 @@ python -u evaluation.py \
 --chosen-epoch="['last']" \
 
 
-python -u evaluation.py \
---base-dir=$PATH_TO_PROJECT_DIR \
---eval-type='retrieval' \
---eval-name='DCoDR_norec__celeba_x64' \
---evaluated-exp-names="[]" \
---root-exps="['DCoDR_norec__celeba_x64']" \
---train-data-name=$dataset \
---delete-weights-folder=$False \
---chosen-epoch="['last']" \
-
 
 
 
