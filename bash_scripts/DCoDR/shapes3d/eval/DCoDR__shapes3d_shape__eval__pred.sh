@@ -14,8 +14,8 @@ python -u evaluation.py \
 --eval-name='DCoDR_shapes3d_shape_50K' \
 --evaluated-exp-names="[]" \
 --root-exps="['DCoDR_shapes3d_shape_50K']" \
---train-data-name=$dataset \
---model-train-data=shapes3d__class_shape__train__reduced_50K \
+--train-data-name=shapes3d__class_shape__train__reduced_50K \
+--test-data-name=shapes3d__class_shape__test \
 --delete-weights-folder=$False \
 --chosen-epoch='last' \
 
