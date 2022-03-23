@@ -1,7 +1,7 @@
 # A Contrastive Objective for Disentangled Representations
 
 ### DCoDR
-> [A Contrastive Objective for Disentangled Representations]() \
+> [A Contrastive Objective for Disentangled Representations](https://arxiv.org/abs/2203.11284) \
 > Joanthan Kahana and Yedid Hoshen \
 > Official PyTorch Implementation
 
@@ -26,7 +26,9 @@
 > the reconstruction constraint, leading to a much faster and resource efficient training.
 
 
-This repository is the official PyTorch implementation of [A Contrastive Objective for Disentangled Representations]()
+This repository is the official PyTorch implementation of [A Contrastive Objective for Disentangled Representations](https://arxiv.org/abs/2203.11284)
+
+<a href="https://arxiv.org/abs/2203.11284" target="_blank"><img src="https://img.shields.io/badge/arXiv-2203.11284-b31b1b.svg"></a>
 
 ## Usage
 
