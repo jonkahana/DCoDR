@@ -103,5 +103,14 @@ Please download model `.pth` files as well as the `config.pkl` file which is nee
 | Shapes3D    | [DCoDR-norec Shapes3D](https://drive.google.com/drive/folders/1b6N9cPFwif24YD5j04WqgM_VteHUlJB5?usp=sharing)       | [DCoDR Shapes3D](https://drive.google.com/drive/folders/1UaGcoeEWRnyT1O_D615eB6Qzl6VS2IJC?usp=sharing)       |
 
 
-
+## Citation
+If you find this useful, please cite our paper:
+```
+@article{kahana2022dcodr,
+  title={A Contrastive Objective for Disentangled Representations},
+  author={Kahana, Jonathan and Hoshen, Yedid},
+  journal={arXiv preprint arXiv:2203.11284},
+  year={2022}
+}
+```
 
