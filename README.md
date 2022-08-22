@@ -106,11 +106,11 @@ Please download model `.pth` files as well as the `config.pkl` file which is nee
 ## Citation
 If you find this useful, please cite our paper:
 ```
-@article{kahana2022dcodr,
-  title={A Contrastive Objective for Disentangled Representations},
-  author={Kahana, Jonathan and Hoshen, Yedid},
-  journal={arXiv preprint arXiv:2203.11284},
-  year={2022}
+@inproceedings{kahana2022dcodr,
+ author = {Kahana, Jonathan and Hoshen, Yedid},
+ booktitle = {European Conference on Computer Vision (ECCV) },
+ title = {A Contrastive Objective for Disentangled Representations},
+ year = {2022}
 }
 ```
 
